@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="xxxxx">
+    <title>Conversor temporal</title>
+</head>
+
+<body>
+    <div class="container-principal">
+        <p class="header">FRAGMENTOS TEMPORAL</p>
+        <div class="container1">
+            <div class="sub-titulo">
+                <P>Converta os minutos em segundos</P>
+            </div>
+            <div class="container-input">
+                <input  class="input" type="number" placeholder="Segundos" id="segundos" onblur="convertSeconds(this)">
+                <input  class="input" type="number" placeholder="Minutos" id="minutos" onblur="convertMinutes(this)">
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script> 
+    function convertSeconds(input) {
+        const segundos = input.value;
+        document.getElementById("minutos").value = segundos / 60;
+    }
+
+    function convertMinutes(input) {
+        const minutos= input.value;
+        document.getElementById("segundos").value = minutos * 60;
+    }
+</script>
+
+</html>
